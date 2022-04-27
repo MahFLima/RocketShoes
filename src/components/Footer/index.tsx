@@ -1,13 +1,24 @@
 import React from "react";
+import ReactPlayer from "react-player/lazy";
 import arrow from "../../assets/icon-arrow.svg";
-import ReactPlayer from 'react-player';
+import shoes3 from "../../assets/tenis-3-galeria.png";
 
-import { Container, MenuSocial, Explorer } from "./styles";
+
+import { Container, MenuSocial, Explorer, MenuSocialResponsive, IconInstagram, IconYoutube, IconFacebook, IconTwitter} from "./styles";
 
 const Footer: React.FC = () => {
   return (
     <Container>
-      <ReactPlayer width="300px" height="100%" controls url="https://www.youtube.com/watch?v=S5Qvi23VqaQ"/>
+      <img src={shoes3}/>
+      {/* <ReactPlayer width="300px" height="100%" controls url="https://www.youtube.com/watch?v=S5Qvi23VqaQ"/> */}
+      
+      <MenuSocialResponsive>
+        <IconFacebook/>
+        <IconInstagram/>
+        <IconYoutube/>
+        <IconTwitter/>
+      </MenuSocialResponsive>
+      
       <MenuSocial>
         <li>
           <a href="">FACEBOOK</a>

@@ -1,4 +1,10 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import {
+  FacebookSquare,
+  Instagram,
+  Youtube,
+  Twitter,
+} from "../../styles/Icons";
 
 export const Container = styled.div`
   width: 100%;
@@ -6,14 +12,18 @@ export const Container = styled.div`
   background: var(--background);
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 720px) {
+    display: none;
+  }
 `;
 
 export const MenuSocial = styled.ul`
   display: flex;
   align-items: center;
-  gap: 70px;
   > li {
     list-style-type: none;
+    padding: 1rem;
 
     &:hover {
       opacity: 0.7;
@@ -24,6 +34,10 @@ export const MenuSocial = styled.ul`
       font-weight: 700;
       color: var(--text);
     }
+  }
+
+  @media (max-width: 1024px) {
+    display: none;
   }
 `;
 
@@ -41,12 +55,42 @@ export const Explorer = styled.button`
   gap: 14px;
   cursor: pointer;
 
-  &:hover{
+  &:hover {
     opacity: 0.7;
   }
 
-  >img{
+  > img {
     width: 24px;
     height: 24px;
   }
+`;
+
+export const MenuSocialResponsive = styled.div`
+  display: none;
+
+  @media (max-width: 1024px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 2rem;
+  }
+`;
+export const iconCss = css`
+  width: 3rem;
+  height: 3rem;
+`;
+
+export const IconInstagram = styled(Instagram)`
+  ${iconCss}
+`;
+export const IconYoutube = styled(Youtube)`
+  ${iconCss}
+`;
+export const IconFacebook = styled(FacebookSquare)`
+  ${iconCss}
+`;
+export const IconTwitter = styled(Twitter)`
+  ${iconCss}
 `;

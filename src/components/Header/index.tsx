@@ -8,6 +8,7 @@ import { Container, IconShoes, Menu, InputSearch, IconBag, IconSearch } from './
 const Header: React.FC = () => {
   return (
     <Container>
+
       <IconShoes src={Shoes}/>
       <Menu>
         <li>

@@ -4,6 +4,10 @@ export const Container = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
+
+  @media (max-width: 1024px){
+    flex-direction: column;
+  }
 `;
 
 export const Price = styled.div`
@@ -12,18 +16,19 @@ export const Price = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 80px;
-
+  padding-top: 5rem;
+  justify-content: center;
+  
   > div {
-    width: min(357px, 100%);
-    height: min(533px, 100%);
+    width: min(22rem, 100%);
+    height: min(33rem, 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 21px;
 
     > h1 {
-      font-size: 40px;
+      font-size: 2.5rem;
       font-weight: 700;
     }
 
@@ -53,6 +58,13 @@ export const Price = styled.div`
       }
     }
   }
+
+  @media(max-width: 1024px){
+    padding: 3rem;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+  }
 `;
 
 export const Main = styled.div`
@@ -62,7 +74,12 @@ export const Main = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding-top: 60px;
+
+  @media(max-width: 1024px){
+    width: 100%;
+  }
 `;
 
 export const ImgShoes = styled.img`
@@ -77,5 +94,11 @@ export const ContentShoes = styled.div`
   >img{
     width: 200px;
     height: 150px;
+  }
+
+  @media(max-width: 720px){
+    flex-direction: column;
+    width: min(200px, 100%);
+    height: min(150px, 100%);
   }
 `

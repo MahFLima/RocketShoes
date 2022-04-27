@@ -1,13 +1,19 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  width: 100%;
   display: flex;
+  justify-content: space-between;
   padding: 20px 60px;
   align-items: center;
   gap: 80px;
-  justify-content: center;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
+
+  >video{
+    width: 300px;
+    height: 100%;
+  }
 
   >div{
     position: relative;
@@ -15,6 +21,10 @@ export const Container = styled.div`
     height: 45px;
     display: flex;
     align-items: center;
+  }
+
+  @media (max-width: 1024px){
+    display: none;
   }
 `;
 
@@ -50,9 +60,9 @@ export const InputSearch = styled.input`
   border: none;
   font-size: 18px;
   font-weight: 500;
-  padding: 10px 30px;
+  padding: 0.8rem 2rem;
 `
-export const IconBag = styled.video`
+export const IconBag = styled.img`
   width: 34px;
   height: 34px;
   cursor: pointer;
